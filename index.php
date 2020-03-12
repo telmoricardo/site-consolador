@@ -1,5 +1,4 @@
 <?php
-ob_start();
 session_start();
 
 require __DIR__ . "/vendor/autoload.php";
@@ -24,7 +23,9 @@ $router->get("/senha/{email}/{forget}", "Site:reset", "site.reset");
  */
 $router->group("/me");
 $router->get("/home", "Dashboard:home", "dashboard.home");
+$router->get("/slider", "Dashboard:slider", "dashboard.slider");
 $router->get("/sair", "Dashboard:logoff", "dashboard.logoff");
+
 
 /*
  * AUTH

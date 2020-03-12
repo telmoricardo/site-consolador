@@ -25,7 +25,7 @@ define("DATA_LAYER_CONFIG", [
     "driver" => "mysql",
     "host" => "localhost",
     "port" => "3306",
-    "dbname" => "app_consolador",
+    "dbname" => "oconsolador",
     "username" => "root",
     "passwd" => "",
     "options" => [

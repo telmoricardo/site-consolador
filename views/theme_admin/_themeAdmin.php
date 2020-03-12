@@ -10,22 +10,13 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?= asset("plugins/fontawesome-free/css/all.min.css"); ?>">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="<?= asset("ionicons.min.css"); ?>>
-    <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet" href="<?= asset("plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"); ?>">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="<?= asset("plugins/icheck-bootstrap/icheck-bootstrap.min.css"); ?>">
-    <!-- JQVMap -->
-    <link rel="stylesheet" href="<?= asset("plugins/jqvmap/jqvmap.min.css"); ?>">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="<?= asset("plugins/datatables-bs4/css/dataTables.bootstrap4.css"); ?>">
+
+    <link rel="stylesheet" href="<?= asset("plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"); ?>">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= asset("dist/css/adminlte.min.css"); ?>"/>
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="<?= asset("plugins/overlayScrollbars/css/OverlayScrollbars.min.css"); ?>">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="<?= asset("plugins/daterangepicker/daterangepicker.css"); ?>">
-    <!-- summernote -->
-    <link rel="stylesheet" href="<?= asset("plugins/summernote/summernote-bs4.css"); ?>">
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="<?= asset("google.fonts.css"); ?>">
 </head>
@@ -186,37 +177,24 @@
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    <!-- Add icons to the links using the .nav-icon class
-                         with font-awesome or any other icon font library -->
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-film"></i>
                             <p>
-                                Dashboard
+                                Sliders
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="<?= $router->route("dashboard.sliderList"); ?>" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v1</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index2.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v2</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="./index3.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v3</p>
+                                    <p>Listar</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
+
                     <li class="nav-item">
                         <a href="pages/widgets.html" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
@@ -763,38 +741,12 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="<?= asset("plugins/jquery/jquery.min.js"); ?>"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="<?= asset("plugins/jquery-ui/jquery-ui.min.js"); ?>"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button)
-</script>
+<script src="<?= asset("js/jquery.js"); ?>"></script>
 <!-- Bootstrap 4 -->
 <script src="<?= asset("plugins/bootstrap/js/bootstrap.bundle.min.js"); ?>"></script>
-<!-- ChartJS -->
-<script src="<?= asset("plugins/chart.js/Chart.min.js"); ?>"></script>
-<!-- Sparkline -->
-<script src="<?= asset("plugins/sparklines/sparkline.js"); ?>"></script>
-<!-- JQVMap -->
-<script src="<?= asset("plugins/jqvmap/jquery.vmap.min.js"); ?>"></script>
-<script src="<?= asset("plugins/jqvmap/maps/jquery.vmap.usa.js"); ?>"></script>
-<!-- jQuery Knob Chart -->
-<script src="<?= asset("plugins/jquery-knob/jquery.knob.min.js"); ?>"></script>
-<!-- daterangepicker -->
-<script src="<?= asset("plugins/moment/moment.min.js"); ?>"></script>
-<script src="<?= asset("plugins/daterangepicker/daterangepicker.js"); ?>"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="<?= asset("plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"); ?>"></script>
-<!-- Summernote -->
-<script src="<?= asset("plugins/summernote/summernote-bs4.min.js"); ?>"></script>
-<!-- overlayScrollbars -->
-<script src="<?= asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"); ?>"></script>
 <!-- AdminLTE App -->
 <script src="<?= asset("dist/js/adminlte.js"); ?>"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?= asset("dist/js/pages/dashboard.js"); ?>"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?= asset("dist/js/demo.js"); ?>"></script>
+
+<?= $v->section("scripts"); ?>
 </body>
 </html>
